@@ -1,11 +1,12 @@
 package br.ufscar.isell
 
-class Order {
+class ShoppingOrder {
 
-    Date when
+    Client client
+    Date created_at = new Date()
 
     static hasMany = [ products: Product, payments: Payment ]
-    static belongsTo = [ client: Client ]
+    static belongsTo = Product
 
     static constraints = {
     }
