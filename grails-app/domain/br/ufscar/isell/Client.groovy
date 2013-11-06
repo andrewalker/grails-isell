@@ -11,7 +11,7 @@ class Client {
     String telephone
     String cpf
 
-    static hasMany = [ orders: ShoppingOrders ]
+    static hasMany = [ orders: ShoppingOrder ]
 
     static constraints = {
         first_name blank: false

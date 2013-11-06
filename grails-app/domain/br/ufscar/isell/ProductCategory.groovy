@@ -4,7 +4,7 @@ class ProductCategory {
 
     String name
 
-    static belongsTo = [ product: Product ]
+    static hasMany = [ products: Product ]
 
     static constraints = {
         name blank: false
