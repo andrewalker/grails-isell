@@ -6,7 +6,7 @@ class Product {
     String name
     Float price
     Integer year
-    Integer amount_in_stock
+    Integer amountInStock
     String description
 
     static hasMany = [ orders: ShoppingOrder ]

@@ -2,8 +2,8 @@ package br.ufscar.isell
 
 class Client {
 
-    String first_name
-    String last_name
+    String firstName
+    String lastName
     String address
     String city
     String state
@@ -14,8 +14,8 @@ class Client {
     static hasMany = [ orders: ShoppingOrder ]
 
     static constraints = {
-        first_name blank: false
-        last_name blank: false
+        firstName blank: false
+        lastName blank: false
         email blank: false, unique: true
         cpf blank: false, unique: true
     }

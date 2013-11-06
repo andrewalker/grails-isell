@@ -2,8 +2,8 @@ package br.ufscar.isell
 
 class Payment {
 
-    Date started_at = new Date()
-    Date confirmed_at
+    Date startedAt = new Date()
+    Date confirmedAt
     String status
     String comments
 
