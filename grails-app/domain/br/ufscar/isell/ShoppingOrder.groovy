@@ -10,4 +10,8 @@ class ShoppingOrder {
 
     static constraints = {
     }
+
+    String toString() {
+        return this.client + ' - ' + this.createdAt.format('dd/MM/yyyy')
+    }
 }

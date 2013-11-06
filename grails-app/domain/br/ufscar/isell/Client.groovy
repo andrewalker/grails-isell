@@ -19,4 +19,8 @@ class Client {
         email blank: false, unique: true
         cpf blank: false, unique: true
     }
+
+    String toString() {
+        return this.firstName + ' ' + this.lastName;
+    }
 }

@@ -14,4 +14,12 @@ class Product {
     static constraints = {
         name blank: false
     }
+
+    static mapping = {
+        description type: 'text'
+    }
+
+    String toString() {
+        return this.name;
+    }
 }

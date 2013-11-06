@@ -11,4 +11,8 @@ class Payment {
 
     static constraints = {
     }
+
+    static mapping = {
+        comments type: 'text'
+    }
 }

@@ -9,4 +9,8 @@ class ProductCategory {
     static constraints = {
         name blank: false
     }
+
+    String toString() {
+        return this.name;
+    }
 }
