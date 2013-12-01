@@ -9,7 +9,7 @@ class Product {
     Integer amountInStock
     String description
 
-    static hasMany = [ orders: ShoppingOrder ]
+    
 
     static constraints = {
         name blank: false
