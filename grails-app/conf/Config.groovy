@@ -1,17 +1,4 @@
-// locations to search for config files that get merged into the main config;
-// config files can be ConfigSlurper scripts, Java properties files, or classes
-// in the classpath in ConfigSlurper format
-
-// grails.config.locations = [ "classpath:${appName}-config.properties",
-//                             "classpath:${appName}-config.groovy",
-//                             "file:${userHome}/.grails/${appName}-config.properties",
-//                             "file:${userHome}/.grails/${appName}-config.groovy"]
-
-// if (System.properties["${appName}.config.location"]) {
-//    grails.config.locations << "file:" + System.properties["${appName}.config.location"]
-// }
-
-grails.project.groupId = appName // change this to alter the default package name and Maven publishing destination
+grails.project.groupId = 'br.ufscar.isell'
 
 // The ACCEPT header will not be used for content negotiation for user agents containing the following strings (defaults to the 4 major rendering engines)
 grails.mime.disable.accept.header.userAgents = ['Gecko', 'WebKit', 'Presto', 'Trident']
@@ -119,18 +106,6 @@ grails.plugin.springsecurity.successHandler.defaultTargetUrl = '/client/index'
 grails.plugin.springsecurity.userLookup.userDomainClassName = 'br.ufscar.isell.UserSec'
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'br.ufscar.isell.UserSecRoleSec'
 grails.plugin.springsecurity.authority.className = 'br.ufscar.isell.RoleSec'
-grails.plugin.springsecurity.controllerAnnotations.staticRules = [
-    '/':                              ['permitAll'],
-    '/mainPage/**':                   ['permitAll'],
-    '/client/login':                  ['permitAll'],
-    '/client/signup':                 ['permitAll'],
-    '/shoppingOrder/shopping_cart':   ['permitAll'],
-    '/shoppingOrder/checkout':        ['permitAll'],
-    '/admin/login':                   ['permitAll'],
-    '/product/details':               ['permitAll'],
-    '/**/js/**':                      ['permitAll'],
-    '/**/css/**':                     ['permitAll'],
-    '/**/images/**':                  ['permitAll'],
-    '/**/favicon.ico':                ['permitAll']
-]
 grails.views.javascript.library="jquery"
+grails.plugin.springsecurity.rejectIfNoRule = false
+grails.plugin.springsecurity.fii.rejectPublicInvocations = false
