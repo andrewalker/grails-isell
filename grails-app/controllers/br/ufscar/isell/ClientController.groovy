@@ -4,7 +4,7 @@ import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 import grails.plugin.springsecurity.annotation.Secured
 
-@Secured(['ROLE_ADMIN'])
+
 @Transactional(readOnly = true)
 class ClientController {
 
@@ -14,6 +14,9 @@ class ClientController {
         params.max = Math.min(max ?: 10, 100)
         respond Client.list(params), model:[clientInstanceCount: Client.count()]
     }
+    
+    def login(){} // implementar 
+    def signup(){} // implementar
 
     def show(Client clientInstance) {
         respond clientInstance

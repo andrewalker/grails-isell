@@ -14,7 +14,9 @@ class ProductController {
         params.max = Math.min(max ?: 10, 100)
         respond Product.list(params), model:[productInstanceCount: Product.count()]
     }
-
+    def details(){
+        // implementar
+    }
     def show(Product productInstance) {
         respond productInstance
     }
