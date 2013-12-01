@@ -120,10 +120,17 @@ grails.plugin.springsecurity.userLookup.userDomainClassName = 'br.ufscar.isell.U
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'br.ufscar.isell.UserSecRoleSec'
 grails.plugin.springsecurity.authority.className = 'br.ufscar.isell.RoleSec'
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
-	'/':                              ['permitAll'],
-	'/**/js/**':                      ['permitAll'],
-	'/**/css/**':                     ['permitAll'],
-	'/**/images/**':                  ['permitAll'],
-	'/**/favicon.ico':                ['permitAll']
+    '/':                              ['permitAll'],
+    '/mainPage/**':                   ['permitAll'],
+    '/client/login':                  ['permitAll'],
+    '/client/signup':                 ['permitAll'],
+    '/shoppingOrder/shopping_cart':   ['permitAll'],
+    '/shoppingOrder/checkout':        ['permitAll'],
+    '/admin/login':                   ['permitAll'],
+    '/product/details':               ['permitAll'],
+    '/**/js/**':                      ['permitAll'],
+    '/**/css/**':                     ['permitAll'],
+    '/**/images/**':                  ['permitAll'],
+    '/**/favicon.ico':                ['permitAll']
 ]
 grails.views.javascript.library="jquery"

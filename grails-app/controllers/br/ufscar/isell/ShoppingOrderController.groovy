@@ -15,6 +15,8 @@ class ShoppingOrderController {
         respond ShoppingOrder.list(params), model:[shoppingOrderInstanceCount: ShoppingOrder.count()]
     }
 
+    def shopping_cart(){}//implementar
+    def checkout(){}//implementar
     def show(ShoppingOrder shoppingOrderInstance) {
         respond shoppingOrderInstance
     }
